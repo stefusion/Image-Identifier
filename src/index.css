@@ -1,0 +1,214 @@
+/* index.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+h1.header {
+  margin: 20px 0;
+  margin-left: 10px;
+}
+
+.mainWrapper {
+  padding: 0 10px;
+  width: 100%;
+  /* max-width: 1200px; */
+}
+
+.mainContent {
+  display: flex;
+  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .mainContent {
+    flex-direction: column;
+  }
+}
+
+.inputHolder {
+  padding: 0 10px;
+  display: flex;
+  gap: 20px;
+  
+}
+
+.inputHolder input[type="file"] {
+  max-width: 400px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 0;
+  display: inline-block;
+  border: 1px solid #222;
+  outline: none;
+}
+
+.inputHolder .uploadImage {
+  padding: 8px 16px;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin-left: 10px;
+}
+
+.imageHolder {
+  width: 60%;
+  /* max-width: 900px; */
+  height: 70vmin;
+  margin-right: 20px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .imageHolder {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.imageHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  padding: 12px 17px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  background: blueviolet;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #8a2be2;
+}
+
+.resultsHolder {
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resultsHolder .result {
+  border: 1px solid #333;
+  margin: 0 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.resultsHolder .result:first-of-type {
+  border-color: #333;
+  background-color: #333;
+}
+
+.resultsHolder .result:first-of-type .name {
+  color: #fff;
+}
+
+.resultsHolder .result:first-of-type .confidence {
+  color: #dfdfdf;
+}
+
+.resultsHolder .result .name {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resultsHolder .result .confidence {
+  display: block;
+  font-weight: 300;
+}
+
+.resultsHolder .result .confidence .bestGuess {
+  background: #fff;
+  padding: 2px 6px;
+  color: #333;
+  margin-left: 3px;
+}
+
+.recentPredictions {
+  margin: 40px 0 0;
+  background: #dac2ff;
+  padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recentPredictions h2 {
+  color: #111;
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.recentPredictions .recentImages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recentPredictions .recentPrediction {
+  flex: 0 0 calc(20% - 10px);
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.recentPredictions .recentPrediction img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .recentPredictions .recentPrediction {
+    flex: 0 0 calc(25% - 10px);
+  }
+}
+
+@media (max-width: 870px) {
+  .recentPredictions .recentPrediction {
+    flex: 0 0 calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 700px) {
+  .recentPredictions .recentPrediction {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
